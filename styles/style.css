@@ -1,0 +1,154 @@
+.page {
+  height: 100%;
+  word-break: break-word;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 85px 50px 75px 40px;
+}
+
+.users__form {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 0;
+}
+
+.users__form-filter {
+  min-width: 260px;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  margin: 0 4px 12px auto;
+  border: 1px solid #bfbfbf;
+  border-radius: 3px;
+  background-color: #ffffff;
+  color: #000000;
+  letter-spacing: 0.05em;
+}
+
+.users__form-filter::placeholder {
+  color: #bfbfbf;
+}
+
+.users__form fieldset {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 8px;
+  padding-top: 0;
+  border: none;
+  background-color: #ffffff;
+}
+
+.users__form-title {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  padding: 0;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.table {
+  width: 100%;
+  min-height: 110px;
+  margin-bottom: 5px;
+  text-align: start;
+}
+
+.table a {
+  color: #3099ba;
+  text-decoration: none;
+}
+
+.table td {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table__heading {
+  border-bottom: 2px solid #bfbfbf;
+}
+
+.table__heading input {
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  padding: 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: #bfbfbf;
+  border: none;
+  background: none;
+}
+
+.table__name,
+.table__e-mail {
+  max-width: 125px;
+}
+
+.table__company {
+  width: 200px;
+}
+
+.table__tel {
+  width: 206px;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 0.07em;
+}
+
+.table__address {
+  max-width: 200px;
+}
+
+.users__form-container {
+  text-align: end;
+}
+
+.users__form-overall,
+.users__form-overall-number {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+}
+
+.users__form-overall-number {
+  width: 20px;
+  max-width: 100px;
+  border: none;
+  background: none;
+}

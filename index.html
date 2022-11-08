@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Тестовое задание: Янченков Владимир</title>
+    <link rel="stylesheet" href="./styles/style.css">
+  </head>
+  <body class="page__body">
+    <header class="main-header">
+
+    </header>
+
+    <main class="main-container">
+      <h1 class="visually-hidden">Главная страница</h1>
+      <section class="users">
+        <form class="users__form" action="https://jsonplaceholder.typicode.com/users" method="get">
+          <input class="users__form-filter" type="search" id="filter" name="filter" placeholder="Поиск по ФИО" autocomplete="off">
+          <fieldset>
+            <legend class="users__form-title">Список пользователей</legend>
+            <table class="users__form-table table">
+              <tr class="table__heading">
+                <th class="table__name"><input type="button" value="ФИО"></th>
+                <th class="table__e-mail"><input type="button" value="E-mail"></th>
+                <th class="table__address"><input type="button" value="Адрес"></th>
+                <th class="table__tel"><input type="button" value="Телефон"></th>
+                <th class="table__company"><input type="button" value="Компания"></th>
+              </tr>
+            </table>
+            <div class="users__form-container">
+              <span class="users__form-overall">Итого:</span>
+              <input class="users__form-overall-number" type="text">
+            </div>
+          </fieldset>
+        </form>
+      </section>
+
+    </main>
+
+    <footer class="main-footer">
+
+    </footer>
+
+    <template id="card">
+      <tr class="table__row">
+        <td class="table__name">Leanne Graham</td>
+        <td class="table__e-mail"><a class="table__link" href="mailto:vladster@mail.ru">sincere@april.biz</a></td>
+        <td class="table__address">Wisokyburgh, Victor Plains, Sui...</td>
+        <td class="table__tel">11-770-736-8031 x56442</td>
+        <td class="table__company">Romaguera-Crona</td>
+      </tr>
+    </template>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
