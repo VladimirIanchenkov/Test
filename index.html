@@ -20,11 +20,11 @@
             <legend class="users__form-title">Список пользователей</legend>
             <table class="users__form-table table">
               <tr class="table__heading">
-                <th class="table__name"><input type="button" value="ФИО"></th>
-                <th class="table__e-mail"><input type="button" value="E-mail"></th>
-                <th class="table__address"><input type="button" value="Адрес"></th>
-                <th class="table__tel"><input type="button" value="Телефон"></th>
-                <th class="table__company"><input type="button" value="Компания"></th>
+                <th class="table__name"><input type="button" id="name" value="ФИО"></th>
+                <th class="table__e-mail"><input type="button" id="email" value="E-mail"></th>
+                <th class="table__address"><input type="button" id="address" value="Адрес"></th>
+                <th class="table__tel"><input type="button" id="phone" value="Телефон"></th>
+                <th class="table__company"><input type="button" id="company" value="Компания"></th>
               </tr>
             </table>
             <div class="users__form-container">
@@ -42,7 +42,7 @@
     </footer>
 
     <template id="card">
-      <tr class="table__row">
+      <tr id="table-row" class="table__row">
         <td class="table__name">Leanne Graham</td>
         <td class="table__e-mail"><a class="table__link" href="mailto:vladster@mail.ru">sincere@april.biz</a></td>
         <td class="table__address">Wisokyburgh, Victor Plains, Sui...</td>
