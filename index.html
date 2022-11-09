@@ -14,8 +14,8 @@
     <main class="main-container">
       <h1 class="visually-hidden">Главная страница</h1>
       <section class="users">
-        <form class="users__form" action="https://jsonplaceholder.typicode.com/users" method="get">
-          <input class="users__form-filter" type="search" id="filter" name="filter" placeholder="Поиск по ФИО" autocomplete="off">
+        <form class="users__form">
+          <input class="users__form-filter" action="#" type="text" id="filter" name="filter" placeholder="Поиск по ФИО" autocomplete="off">
           <fieldset>
             <legend class="users__form-title">Список пользователей</legend>
             <table class="users__form-table table">
@@ -29,7 +29,7 @@
             </table>
             <div class="users__form-container">
               <span class="users__form-overall">Итого:</span>
-              <input class="users__form-overall-number" type="text">
+              <span class="users__form-overall-number"></span>
             </div>
           </fieldset>
         </form>

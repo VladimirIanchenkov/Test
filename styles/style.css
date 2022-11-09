@@ -141,14 +141,15 @@
 
 .users__form-overall,
 .users__form-overall-number {
+  display: inline-block;
+  vertical-align: middle;
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
 }
 
 .users__form-overall-number {
-  width: 20px;
+  text-align: start;
+  min-width: 15px;
   max-width: 100px;
-  border: none;
-  background: none;
 }
