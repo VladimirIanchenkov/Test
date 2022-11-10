@@ -81,7 +81,7 @@
 
 .table {
   width: 100%;
-  min-height: 110px;
+  min-height: 60px;
   margin-bottom: 5px;
   text-align: start;
 }
@@ -100,12 +100,22 @@
 }
 
 .table__heading {
-  border-bottom: 2px solid #bfbfbf;
+  position: relative;
+}
+
+.table__heading::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #bfbfbf;
 }
 
 .table__heading input {
   width: 100%;
-  min-height: 60px;
+  height: 60px;
   display: flex;
   padding: 0;
   cursor: pointer;

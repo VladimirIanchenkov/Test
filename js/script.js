@@ -17,86 +17,33 @@ const createCustomCard = (card) => {
   return cardItem;
 }
 
-// Функция сравнения по имени
-const compareNames = (a, b) => {
-  if (a.name > b.name) {
-    return 1;
-  }
-  if (a.name < b.name) {
-    return -1;
-  }
-  return 0;
-}
+//Функция сравнения по имени, e-mail, адресу, телефону, компании
+function compareByField (sorter) {
+  let field;
 
-// Функция сравнения по e-mail
-const compareLinks = (a, b) => {
-  if (a.email > b.email) {
-    return 1;
-  }
-  if (a.email < b.email) {
-    return -1;
-  }
-  return 0;
-}
+  if (sorter === 'name' || sorter === 'email' || sorter === 'phone') {
+    switch (sorter) {
+      case 'name':
+        field = 'name';
+        break;
+      case 'email':
+        field = 'email';
+        break;
+      case 'phone':
+        field = 'phone';
+        break;
+    }
+    return (a, b) => a[field] > b[field] ? 1 : -1;
 
-// Функция сравнения по адресу
-const compareAddresses = (a, b) => {
-  if (a.address.city > b.address.city) {
-    return 1;
-  }
-  if (a.address.city < b.address.city) {
-    return -1;
-  }
-  if (a.address.street > b.address.street) {
-    return 1;
-  }
-  if (a.address.street < b.address.street) {
-    return -1;
-  }
-  if (a.address.suite > b.address.suite) {
-    return 1;
-  }
-  if (a.address.suite < b.address.suite) {
-    return -1;
-  }
-  if (a.address.zipcode > b.address.zipcode) {
-    return 1;
-  }
-  if (a.address.zipcode < b.address.zipcode) {
-    return -1;
-  }
-  return 0;
-}
+  } else if (sorter === 'address') {
+    field = 'address';
+    return (a, b) => a[field].city + a[field].street + a[field].suite + a[field].zipcode > b[field].city + b[field].street + b[field].suite + b[field].zipcode ? 1 : -1;
 
-// Функция сравнения по телефону
-const comparePhones = (a, b) => {
-  if (a.phone > b.phone) {
-    return 1;
-  }
-  if (a.phone < b.phone) {
-    return -1;
-  }
-  return 0;
-}
+  } else if (sorter === 'company') {
+    field = 'company';
+    return (a, b) => a[field].name > b[field].name ? 1 : -1;
 
-// Функция сравнения по компании
-const compareCompanies = (a, b) => {
-  if (a.company.name > b.company.name) {
-    return 1;
   }
-  if (a.company.name < b.company.name) {
-    return -1;
-  }
-  return 0;
-}
-
-// Объект данных ключ-значение по сортировке
-const sortOptions = {
-  'name' : compareNames,
-  'email' : compareLinks,
-  'address' : compareAddresses,
-  'phone' : comparePhones,
-  'company' : compareCompanies,
 }
 
 // Функция сравнения значения инпута и значения имени из массива
@@ -118,7 +65,7 @@ const createDefaultList = (cards) => {
 // Функция сортировки, фильтрации и отрисовки сортированных карточек
 const createSortedList = (cards, sorter) => {
   formReset();
-  let array = cards.slice().filter(filterCards).sort(sortOptions[sorter]);
+  const array = cards.slice().filter(filterCards).sort(compareByField(sorter));
   array.forEach((card) => table.appendChild(createCustomCard(card)));
   total.textContent = array.length;
 }
